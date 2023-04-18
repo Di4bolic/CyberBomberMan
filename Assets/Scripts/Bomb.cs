@@ -6,9 +6,16 @@ public class Bomb : MonoBehaviour
 {
     private float maxChrono = 2f;
     private float chrono;
+    private float maxChronoBis = 0.35f;
+    private float chronoBis;
+    private bool hasExplosed = false;
 
     [SerializeField]
-    private GameObject bombExplosion;
+    private GameObject bombExplosionSide;
+    [SerializeField]
+    private GameObject bombExplosionEnd;
+
+    private GameObject explosion;
 
     public float range;
 
@@ -16,8 +23,7 @@ public class Bomb : MonoBehaviour
     private List<Vector2> directions;
     [SerializeField]
     private LayerMask acceptedLayers;
-    [SerializeField]
-    private Sprite spriteEndExplosion;
+
     [SerializeField]
     private Animator animator;
 
@@ -26,6 +32,7 @@ public class Bomb : MonoBehaviour
     void Start()
     {
         chrono = maxChrono;
+        chronoBis = maxChronoBis;
         directions.Add(Vector2.up);
         directions.Add(Vector2.down);
         directions.Add(Vector2.left);
@@ -39,8 +46,11 @@ public class Bomb : MonoBehaviour
         {
             chrono -= Time.deltaTime;
         }
-        else
+        else if(!hasExplosed)
         {
+            hasExplosed = true;
+            Debug.Log("Explode");
+            animator.SetBool("Explode", true);
             Case tempCase;
             RaycastHit2D rayCastHit;
 
@@ -49,21 +59,34 @@ public class Bomb : MonoBehaviour
                 if (rayCastHit = Physics2D.Raycast(transform.position, directions[i], range, acceptedLayers))
                 {
                     tempCase = rayCastHit.collider.GetComponent<Case>();
+                    var distance = Mathf.Ceil(rayCastHit.distance);
                     if (tempCase != null && tempCase.canBreak)
                     {
-                        Destroy(tempCase.gameObject);
+                        Destroy(tempCase.gameObject);                        
+                        InstantiateExplosions(distance, i);
                     }
-
-                    var distance = Mathf.Ceil(rayCastHit.distance);
-                    InstantiateExplosions(distance, i);
+                    else
+                    {
+                        InstantiateExplosions(distance-1f, i);
+                    }
                 }
                 else
                 {
                     InstantiateExplosions(range, i);
-                }
-                animator.SetTrigger("GoBoomBoom");
-                //Destroy(gameObject);
+                }                
             }            
+        }
+        if (chronoBis > 0)
+        {
+            if (hasExplosed)
+            {
+                chronoBis -= Time.deltaTime;
+            }            
+        }
+        else
+        {
+            Destroy(gameObject);
+            Debug.Log("Stop Exlpode");
         }
     }
 
@@ -71,7 +94,14 @@ public class Bomb : MonoBehaviour
     {
         for (int j = 1; j <= distance; j++)
         {
-            var explosion = Instantiate(bombExplosion, new Vector2(transform.position.x, transform.position.y) + directions[i] * j, Quaternion.identity);
+            if (j == distance)
+            {
+                explosion = Instantiate(bombExplosionEnd, new Vector2(transform.position.x, transform.position.y) + directions[i] * j, Quaternion.identity);
+            }
+            else
+            {
+                explosion = Instantiate(bombExplosionSide, new Vector2(transform.position.x, transform.position.y) + directions[i] * j, Quaternion.identity);
+            }            
             var rotationZ = 0f;
             if (directions[i].x == 0)
             {
@@ -81,11 +111,7 @@ public class Bomb : MonoBehaviour
             {
                 rotationZ = 180f;
             }
-            explosion.transform.eulerAngles = new Vector3(0, 0, rotationZ);
-            if (j == distance)
-            {
-                explosion.GetComponent<BombExplosion>().sr.sprite = spriteEndExplosion;
-            }
+            explosion.transform.eulerAngles = new Vector3(0, 0, rotationZ);            
         }
     }
 }

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 8368961971929054442}
   - component: {fileID: 8368961971929054441}
   - component: {fileID: -7952121946405058411}
-  - component: {fileID: 6886517719760743064}
+  - component: {fileID: 717945289713610225}
   m_Layer: 0
-  m_Name: BombExplosion
+  m_Name: BombExplosionEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 766856231, guid: 16c5a629f34cccf429cf5fb921966b2e, type: 3}
+  m_Sprite: {fileID: -1713240938, guid: 16c5a629f34cccf429cf5fb921966b2e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,8 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb5d9c871c68bd5449b0091da3f81b16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sr: {fileID: 8368961971929054441}
---- !u!95 &6886517719760743064
+--- !u!95 &717945289713610225
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -109,7 +108,7 @@ Animator:
   m_GameObject: {fileID: 8368961971929054440}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f6e69a61fd9da3344b6f314c65e6dcf8, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5838ac1a663187a4a92d915131234aff, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

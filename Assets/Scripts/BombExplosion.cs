@@ -4,17 +4,25 @@ using UnityEngine;
 
 public class BombExplosion : MonoBehaviour
 {
-    public SpriteRenderer sr;
+    private float maxChrono = 0.35f;
+    private float chrono;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        chrono = maxChrono;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (chrono > 0)
+        {
+            chrono -= Time.deltaTime;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }
