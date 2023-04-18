@@ -1,0 +1,1201 @@
+fileFormatVersion: 2
+guid: 16c5a629f34cccf429cf5fb921966b2e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 46
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 436
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe18d7394063abc4a96db04d79ed039d
+      internalID: 205151738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_1
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 436
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf87ee35f2de58d48a47b51aa968575b
+      internalID: 397656194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_2
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 436
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e8c9d53e58c2e47b4f0e58b23b2fb9
+      internalID: 1941018881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_3
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 436
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1531da39954bfb54984b60f8b241e4fd
+      internalID: -809929486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_4
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 436
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3dc22a57a681374bace28900a7a9359
+      internalID: -2119904489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_5
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 436
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e104a837fe7aa844291e57866541e6c5
+      internalID: -224479155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_6
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 436
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b7afec93177ff0479da0d5b7cf407fa
+      internalID: 282244097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_7
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 364
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e5761d95a21e934d8b48776052966e3
+      internalID: -1713240938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_8
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 364
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffa9170b48f0b4f4fb8530fe7fd78d36
+      internalID: -2140689965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_9
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 364
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d651f8ee13bf4a4c9ea5d642436417f
+      internalID: 1725179508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_10
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 364
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7beb64498778be4eb33f5cadd17a4ee
+      internalID: -898494453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_11
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 364
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 651ab6e99e5c0b54483b90ebe93abac5
+      internalID: -56088547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_12
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 364
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28572d8201247bc4094c64e2fbf137ff
+      internalID: -658891819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_13
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 364
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6622bccc467f44d488d181ac8436564d
+      internalID: -1069221494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_14
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 292
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a02fb726d55f4014bbd3df63f65e8988
+      internalID: 766856231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_15
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 292
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac2db87e68f9aff43922e45dc18f1fec
+      internalID: -979542873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_16
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 292
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c61f431bf748d6144adb5ebfa3ae1b41
+      internalID: 491152285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_17
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 292
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c27a0d72ad356b4a91f7f8eaa137d68
+      internalID: 713773386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_18
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 292
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 332b45434fa777d4c969a9597019d3c4
+      internalID: -1594786728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_19
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 292
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ba28cf39b3e70b4cb373449bb533001
+      internalID: -1066471149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_20
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 292
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19e1ce4889106ca47b5ce929e4eaef7c
+      internalID: -120418448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_21
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 220
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65f963fb441393c488c1698583971f32
+      internalID: 1293059626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_22
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 220
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10a1f3e0c981a91478ed816cb187874f
+      internalID: -1202035447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_23
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 220
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98f61e6be4c527a4bb1602355932c9b3
+      internalID: 897170785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_24
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 220
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55a394ba3ff9cc44f99955bb22bf989f
+      internalID: 1613825859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_25
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 220
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d6cbb2136021a747958d01a1aef08e7
+      internalID: 175141464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_26
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 220
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 317eadff5b343aa42a7c284807ea9af6
+      internalID: -1337149336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_27
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 220
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8240ea79bee433e4f8bae0dd6b9a5fca
+      internalID: 2022556766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_28
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 148
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c17fb773fab2114fa1f0f7c9b346eea
+      internalID: 62348513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_29
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 148
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e19c33babbafdc34da25e0630612fa95
+      internalID: 155233476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_30
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 148
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef11d551895b31545b9a3022b6802abb
+      internalID: -1401325988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_31
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 148
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 675e88cde38cb0d4a8912167289c200a
+      internalID: -1413342656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_32
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 148
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac01edeffc4eed04d93c8bb863bbaf7f
+      internalID: 942984082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_33
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 148
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfc0c0108d81b0b419988ce50d185b49
+      internalID: -1384374591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_34
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 148
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 937f91cc9b5b22e478b4139feaefc0ba
+      internalID: 7462785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_35
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 76
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e1367236b8d1a3418e5f1bc3a78d17c
+      internalID: 1420631723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_36
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 76
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ab3ac2756dd13a498d8b513758085dc
+      internalID: -1882787515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_37
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 76
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6134050f2bee25b46b4a6c15e35a6323
+      internalID: -2048304708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_38
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 76
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0830d056c2d1a344f9f3e2d5b756c98a
+      internalID: 1462112828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_39
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 76
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c3e2a9a4aa8c914db1d7558278132cb
+      internalID: -1743214754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_40
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 76
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b77c8e7ec68f2f54e9380916786e6faf
+      internalID: -218859630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_41
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 76
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58ac2631ffb2f3946a5ae8ca52deba5b
+      internalID: 1619717413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_42
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 4
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d4309511977d84419face525b21cfb7
+      internalID: -1423738151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_43
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 4
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70a4eec971c19324bbce4a9cd8237a06
+      internalID: 1591751862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_44
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 4
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd8ad30f61e215047bcf35d2e6195c2d
+      internalID: -1181619504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_45
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 4
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 041a684660f5d2b458c3cd1182160b63
+      internalID: -321771225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_46
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 4
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc9d0f499a2959c49b13b574524d39d2
+      internalID: -1384476678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_47
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 4
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9190ccc251052a740852df6f81eeb78e
+      internalID: 1082970824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Bomberman Taisen - Bomb_48
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 4
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 723c1a3229a2583428a45a5bef81a622
+      internalID: 73845141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Mobile - Bomberman Taisen - Bomb_30: -1401325988
+      Mobile - Bomberman Taisen - Bomb_4: -2119904489
+      Mobile - Bomberman Taisen - Bomb_0: 205151738
+      Mobile - Bomberman Taisen - Bomb_12: -658891819
+      Mobile - Bomberman Taisen - Bomb_25: 175141464
+      Mobile - Bomberman Taisen - Bomb_13: -1069221494
+      Mobile - Bomberman Taisen - Bomb_19: -1066471149
+      Mobile - Bomberman Taisen - Bomb_31: -1413342656
+      Mobile - Bomberman Taisen - Bomb_22: -1202035447
+      Mobile - Bomberman Taisen - Bomb_38: 1462112828
+      Mobile - Bomberman Taisen - Bomb_21: 1293059626
+      Mobile - Bomberman Taisen - Bomb_8: -2140689965
+      Mobile - Bomberman Taisen - Bomb_16: 491152285
+      Mobile - Bomberman Taisen - Bomb_24: 1613825859
+      Mobile - Bomberman Taisen - Bomb_20: -120418448
+      Mobile - Bomberman Taisen - Bomb_43: 1591751862
+      Mobile - Bomberman Taisen - Bomb_41: 1619717413
+      Mobile - Bomberman Taisen - Bomb_28: 62348513
+      Mobile - Bomberman Taisen - Bomb_36: -1882787515
+      Mobile - Bomberman Taisen - Bomb_17: 713773386
+      Mobile - Bomberman Taisen - Bomb_35: 1420631723
+      Mobile - Bomberman Taisen - Bomb_5: -224479155
+      Mobile - Bomberman Taisen - Bomb_29: 155233476
+      Mobile - Bomberman Taisen - Bomb_34: 7462785
+      Mobile - Bomberman Taisen - Bomb_1: 397656194
+      Mobile - Bomberman Taisen - Bomb_27: 2022556766
+      Mobile - Bomberman Taisen - Bomb_2: 1941018881
+      Mobile - Bomberman Taisen - Bomb_23: 897170785
+      Mobile - Bomberman Taisen - Bomb_45: -321771225
+      Mobile - Bomberman Taisen - Bomb_48: 73845141
+      Mobile - Bomberman Taisen - Bomb_46: -1384476678
+      Mobile - Bomberman Taisen - Bomb_9: 1725179508
+      Mobile - Bomberman Taisen - Bomb_37: -2048304708
+      Mobile - Bomberman Taisen - Bomb_32: 942984082
+      Mobile - Bomberman Taisen - Bomb_15: -979542873
+      Mobile - Bomberman Taisen - Bomb_42: -1423738151
+      Mobile - Bomberman Taisen - Bomb_18: -1594786728
+      Mobile - Bomberman Taisen - Bomb_40: -218859630
+      Mobile - Bomberman Taisen - Bomb_44: -1181619504
+      Mobile - Bomberman Taisen - Bomb_11: -56088547
+      Mobile - Bomberman Taisen - Bomb_26: -1337149336
+      Mobile - Bomberman Taisen - Bomb_33: -1384374591
+      Mobile - Bomberman Taisen - Bomb_14: 766856231
+      Mobile - Bomberman Taisen - Bomb_39: -1743214754
+      Mobile - Bomberman Taisen - Bomb_7: -1713240938
+      Mobile - Bomberman Taisen - Bomb_47: 1082970824
+      Mobile - Bomberman Taisen - Bomb_3: -809929486
+      Mobile - Bomberman Taisen - Bomb_6: 282244097
+      Mobile - Bomberman Taisen - Bomb_10: -898494453
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

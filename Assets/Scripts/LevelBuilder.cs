@@ -23,7 +23,7 @@ public class LevelBuilder : MonoBehaviour
     private List<int> spawnableCasesIndex;
     private int emptyCasesNear = 0;
     private int minEmptyCasesToSpawnPlayer = 4;
-    private int minEmptyCasesToSpawnEnemy = 3;
+    //private int minEmptyCasesToSpawnEnemy = 3;
 
 
     // Start is called before the first frame update
