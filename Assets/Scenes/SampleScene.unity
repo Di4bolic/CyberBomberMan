@@ -959,7 +959,7 @@ MonoBehaviour:
   numberOfEnemies: 0
   enemy: {fileID: 0}
   spawnableCasesIndex: 
-  numberOfPower1: 1
+  numberOfPower1: 5
   power1: {fileID: 1091669270502281693, guid: f3d0576574d928647b3d61709e9e1e83, type: 3}
   numberOfPower2: 1
   power2: {fileID: 1091669270502281693, guid: 75d2710aef636f24fb8e49473a0bd8a0, type: 3}
@@ -1989,6 +1989,10 @@ PrefabInstance:
     - target: {fileID: 8368961971929054442, guid: bb44feddb7ed26343b61ef09a50fcd77, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8368961971929054443, guid: bb44feddb7ed26343b61ef09a50fcd77, type: 3}
+      propertyPath: range
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb44feddb7ed26343b61ef09a50fcd77, type: 3}
@@ -3490,6 +3494,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8368961971929054443, guid: bb44feddb7ed26343b61ef09a50fcd77, type: 3}
+      propertyPath: range
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb44feddb7ed26343b61ef09a50fcd77, type: 3}
 --- !u!1001 &1749809460
@@ -3546,6 +3554,10 @@ PrefabInstance:
     - target: {fileID: 8368961971929054442, guid: bb44feddb7ed26343b61ef09a50fcd77, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8368961971929054443, guid: bb44feddb7ed26343b61ef09a50fcd77, type: 3}
+      propertyPath: range
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb44feddb7ed26343b61ef09a50fcd77, type: 3}
@@ -4272,6 +4284,10 @@ PrefabInstance:
     - target: {fileID: 8368961971929054442, guid: bb44feddb7ed26343b61ef09a50fcd77, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8368961971929054443, guid: bb44feddb7ed26343b61ef09a50fcd77, type: 3}
+      propertyPath: range
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb44feddb7ed26343b61ef09a50fcd77, type: 3}

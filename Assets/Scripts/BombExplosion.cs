@@ -28,9 +28,18 @@ public class BombExplosion : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<Character>() != null)
+        var chara = collision.gameObject.GetComponent<Character>();
+        var player = collision.gameObject.GetComponent<Player>();
+        if (chara != null)
         {
-            Destroy(collision.gameObject);
+            if (player.shield)
+            {
+                player.activateShield();
+            }
+            else
+            {
+                Destroy(chara.gameObject);
+            }
         }
     }
 }

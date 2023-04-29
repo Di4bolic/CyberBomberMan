@@ -12,12 +12,17 @@ public class Player : Character
     [SerializeField]
     private GameObject prefabBomb;
 
-    private float range = 2;
+    public float range = 1;
+    public bool shield = false;
+
+    private bool isActivated = false;
+    private float chronoShieldMax = 1f;
+    private float chronoShield;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        chronoShield = chronoShieldMax;
     }
 
     // Update is called once per frame
@@ -44,6 +49,18 @@ public class Player : Character
         {
             SpawnBomb();
         }
+
+        if (isActivated)
+        {
+            if (chronoShield > 0)
+            {
+                chronoShield -= Time.deltaTime;
+            }
+            else
+            {
+                shield = false;
+            }
+        }
     }
 
     private void Move(Vector2 direction)
@@ -55,5 +72,10 @@ public class Player : Character
     {
         var createdBomb = Instantiate(prefabBomb, new Vector2(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y)), Quaternion.identity);
         createdBomb.GetComponent<Bomb>().range = range;
+    }
+
+    public void activateShield()
+    {
+        isActivated = true;
     }
 }

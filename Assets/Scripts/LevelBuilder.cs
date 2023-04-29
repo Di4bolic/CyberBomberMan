@@ -32,13 +32,11 @@ public class LevelBuilder : MonoBehaviour
     private int minEmptyCasesToSpawnPlayer = 4;
     private int minEmptyCasesToSpawnEnemy = 3;
 
-    [SerializeField]
-    private int numberOfPower1;
+    private int numberOfPower1 = 1;
     [SerializeField]
     private GameObject power1;
 
-    [SerializeField]
-    private int numberOfPower2;
+    private int numberOfPower2 = 1;
     [SerializeField]
     private GameObject power2;
 

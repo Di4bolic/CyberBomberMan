@@ -15,4 +15,19 @@ public class Power : MonoBehaviour
     {
         
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        var player = collision.gameObject.GetComponent<Player>();
+        if (player != null)
+        {
+            DoStuff(player);
+            Destroy(gameObject);
+        }
+    }
+
+    public virtual void DoStuff(Player player)
+    {
+
+    }
 }
