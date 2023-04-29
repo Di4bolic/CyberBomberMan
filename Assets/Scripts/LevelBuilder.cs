@@ -8,7 +8,8 @@ public class LevelBuilder : MonoBehaviour
     [SerializeField]
     private GameObject prefabCanBreakCase, prefabCantBreakCase;
 
-    public int difficulty;
+    [SerializeField]
+    private int difficulty;
     private float caseSelector;
 
     [SerializeField]
@@ -16,26 +17,41 @@ public class LevelBuilder : MonoBehaviour
     private int casesCount = 0;
 
     [SerializeField]
-    private GameObject player;
+    private int numberOfPlayers;
+    [SerializeField]
+    private List<GameObject> players;
+
+    [SerializeField]
+    private int numberOfEnemies;
     [SerializeField]
     private GameObject enemy;
+
     [SerializeField]
     private List<int> spawnableCasesIndex;
     private int emptyCasesNear = 0;
     private int minEmptyCasesToSpawnPlayer = 4;
-    //private int minEmptyCasesToSpawnEnemy = 3;
+    private int minEmptyCasesToSpawnEnemy = 3;
+
+    [SerializeField]
+    private int numberOfPower1;
+    [SerializeField]
+    private GameObject power1;
+
+    [SerializeField]
+    private int numberOfPower2;
+    [SerializeField]
+    private GameObject power2;
+
+    private List<int> emptyCasesIndexesWithSomething = new List<int>();
 
 
     // Start is called before the first frame update
     void Start()
     {
         GridSpawn();
-        SpawnPlayer();
-        //var results = spawnableCasesIndex.OrderByDescending(n => n);
-        //for (int m = 0; m < spawnableCasesIndex.Count; m++)
-        //{
-        //    Debug.Log(spawnableCasesIndex[m]);
-        //}
+        PlacePlayers();
+        PlacePower(power1, numberOfPower1);
+        PlacePower(power2, numberOfPower2);
     }
 
     // Update is called once per frame
@@ -74,13 +90,50 @@ public class LevelBuilder : MonoBehaviour
         }
     }
 
-    private void SpawnPlayer()
+    private void PlacePlayers()
     {
+        if (numberOfPlayers > players.Count)
+        {
+            numberOfPlayers = players.Count;
+        }
+        else if (numberOfPlayers <= 0)
+        {
+            numberOfPlayers = 1;
+        }
         FindEmptyCases(minEmptyCasesToSpawnPlayer);
-        var selectedCase = spawnableCasesIndex[Random.Range(0, spawnableCasesIndex.Count)];
-        var xpos = -6 + selectedCase % 13;
-        var ypos = -6 + selectedCase / 13;
-        Instantiate(player, new Vector2(xpos, ypos), Quaternion.identity);
+        for (int m = players.Count - 1; m >= numberOfPlayers; m--)
+        {
+            Destroy(players[m]);
+            players.RemoveAt(m);
+        }
+        for (int n = 0; n < players.Count; n++)
+        {
+            var selectedCaseIndex = spawnableCasesIndex[Random.Range(0, spawnableCasesIndex.Count)];
+            while (emptyCasesIndexesWithSomething.Contains(selectedCaseIndex))
+            {
+                selectedCaseIndex = spawnableCasesIndex[Random.Range(0, spawnableCasesIndex.Count)];
+            }
+            emptyCasesIndexesWithSomething.Add(selectedCaseIndex);
+            var xpos = -6 + selectedCaseIndex % 13;
+            var ypos = -6 + selectedCaseIndex / 13;
+            players[n].transform.position = new Vector2(xpos, ypos);
+        }
+    }
+
+    private void PlacePower(GameObject power, int number)
+    {
+        for (int o = 0; o < number; o++)
+        {
+            var selectedCaseIndex = Random.Range(0, listCases.Count);
+            while (listCases[selectedCaseIndex] != null || emptyCasesIndexesWithSomething.Contains(selectedCaseIndex))
+            {
+                selectedCaseIndex = Random.Range(0, listCases.Count);
+            }
+            emptyCasesIndexesWithSomething.Add(selectedCaseIndex);
+            var xpos = -6 + selectedCaseIndex % 13;
+            var ypos = -6 + selectedCaseIndex / 13;
+            Instantiate(power, new Vector2(xpos, ypos), Quaternion.identity);
+        }
     }
 
     private void FindEmptyCases(int minEmptyCasesToSpawn)
@@ -109,7 +162,7 @@ public class LevelBuilder : MonoBehaviour
 
         if (k != 168)
         {
-            if (listCases[k + 1] == null && !spawnableCasesIndex.Contains(k + 1) && k % 12 != 0)
+            if (listCases[k + 1] == null && !spawnableCasesIndex.Contains(k + 1) && (k + 1) / 13f != Mathf.Round((k + 1) / 13f))
             {
                 SearchNearEmptyCases(k + 1);
             }
@@ -117,7 +170,7 @@ public class LevelBuilder : MonoBehaviour
         
         if (k != 0)
         {
-            if (listCases[k - 1] == null && !spawnableCasesIndex.Contains(k - 1) && k % 12 != 1)
+            if (listCases[k - 1] == null && !spawnableCasesIndex.Contains(k - 1) && k / 13f != Mathf.Round( k / 13f))
             {
                 SearchNearEmptyCases(k - 1);
             }
@@ -137,6 +190,6 @@ public class LevelBuilder : MonoBehaviour
             {
                 SearchNearEmptyCases(k - 13);
             }
-        }        
+        }
     }
 }

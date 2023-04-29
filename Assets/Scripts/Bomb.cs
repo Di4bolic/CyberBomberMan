@@ -27,16 +27,19 @@ public class Bomb : MonoBehaviour
     [SerializeField]
     private Animator animator;
 
+    [SerializeField]
+    private Collider2D col2D;
 
     // Start is called before the first frame update
     void Start()
     {
         chrono = maxChrono;
         chronoBis = maxChronoBis;
+
         directions.Add(Vector2.up);
         directions.Add(Vector2.down);
         directions.Add(Vector2.left);
-        directions.Add(Vector2.right);
+        directions.Add(Vector2.right);        
     }
 
     // Update is called once per frame
@@ -48,8 +51,8 @@ public class Bomb : MonoBehaviour
         }
         else if(!hasExplosed)
         {
+            col2D.enabled = true;
             hasExplosed = true;
-            Debug.Log("Explode");
             animator.SetBool("Explode", true);
             Case tempCase;
             RaycastHit2D rayCastHit;
@@ -86,7 +89,6 @@ public class Bomb : MonoBehaviour
         else
         {
             Destroy(gameObject);
-            Debug.Log("Stop Exlpode");
         }
     }
 
@@ -112,6 +114,14 @@ public class Bomb : MonoBehaviour
                 rotationZ = 180f;
             }
             explosion.transform.eulerAngles = new Vector3(0, 0, rotationZ);            
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.GetComponent<Character>() != null)
+        {
+            Destroy(collision.gameObject);
         }
     }
 }
