@@ -8,15 +8,13 @@ public class LevelBuilder : MonoBehaviour
     [SerializeField]
     private GameObject prefabCanBreakCase, prefabCantBreakCase;
 
-    [SerializeField]
-    private int difficulty;
+    private int difficulty = 1;
     private float caseSelector;
 
     [SerializeField]
     private List<Case> listCases;
     private int casesCount = 0;
 
-    [SerializeField]
     private int numberOfPlayers;
     [SerializeField]
     private List<GameObject> players;
@@ -32,7 +30,7 @@ public class LevelBuilder : MonoBehaviour
     private int minEmptyCasesToSpawnPlayer = 4;
     private int minEmptyCasesToSpawnEnemy = 3;
 
-    private int numberOfPower1 = 1;
+    private int numberOfPower1;
     [SerializeField]
     private GameObject power1;
 
@@ -46,16 +44,41 @@ public class LevelBuilder : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ModeSelection();
         GridSpawn();
         PlacePlayers();
+        PlaceEnemies();
         PlacePower(power1, numberOfPower1);
         PlacePower(power2, numberOfPower2);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void ModeSelection()
     {
-        
+        var manager = GameObject.Find("Manager").GetComponent<Manager>();
+        if (manager.isDuel)
+        {
+            OnDuel();
+        }
+        else
+        {
+            OnSolo();
+        }
+    }
+
+    private void OnDuel()
+    {
+        numberOfPlayers = 2;
+        numberOfEnemies = 0;
+        numberOfPower1 = 7;
+        numberOfPower2 = 2;
+    }
+
+    private void OnSolo()
+    {
+        numberOfPlayers = 1;
+        numberOfEnemies = 2 * difficulty;
+        numberOfPower1 = 4;
+        numberOfPower2 = 1;
     }
 
     private void GridSpawn()
@@ -98,6 +121,7 @@ public class LevelBuilder : MonoBehaviour
         {
             numberOfPlayers = 1;
         }
+        spawnableCasesIndex.Clear();
         FindEmptyCases(minEmptyCasesToSpawnPlayer);
         for (int m = players.Count - 1; m >= numberOfPlayers; m--)
         {
@@ -116,6 +140,25 @@ public class LevelBuilder : MonoBehaviour
             var ypos = -6 + selectedCaseIndex / 13;
             players[n].transform.position = new Vector2(xpos, ypos);
         }
+    }
+
+    private void PlaceEnemies()
+    {
+        spawnableCasesIndex.Clear();
+        FindEmptyCases(minEmptyCasesToSpawnEnemy);
+        for (int n = 0; n < numberOfEnemies; n++)
+        {
+            var selectedCaseIndex = spawnableCasesIndex[Random.Range(0, spawnableCasesIndex.Count)];
+            while (emptyCasesIndexesWithSomething.Contains(selectedCaseIndex))
+            {
+                selectedCaseIndex = spawnableCasesIndex[Random.Range(0, spawnableCasesIndex.Count)];
+            }
+            emptyCasesIndexesWithSomething.Add(selectedCaseIndex);
+            var xpos = -6 + selectedCaseIndex % 13;
+            var ypos = -6 + selectedCaseIndex / 13;
+            Instantiate(enemy, new Vector2(xpos, ypos), Quaternion.identity);
+        }
+
     }
 
     private void PlacePower(GameObject power, int number)
@@ -189,5 +232,5 @@ public class LevelBuilder : MonoBehaviour
                 SearchNearEmptyCases(k - 13);
             }
         }
-    }
+    }    
 }

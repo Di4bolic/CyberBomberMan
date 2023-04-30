@@ -19,5 +19,6 @@ public class Shield : Power
     public override void DoStuff(Player player)
     {
         player.shield = true;
+        player.ShowShieldUI();
     }
 }

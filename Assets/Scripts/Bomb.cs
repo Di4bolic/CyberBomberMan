@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bomb : MonoBehaviour
 {
+    public Player playerThatDropMe;
     private float maxChrono = 2f;
     private float chrono;
     private float maxChronoBis = 0.35f;
@@ -88,7 +89,7 @@ public class Bomb : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            DestroyMySelf();
         }
     }
 
@@ -115,6 +116,12 @@ public class Bomb : MonoBehaviour
             }
             explosion.transform.eulerAngles = new Vector3(0, 0, rotationZ);            
         }
+    }
+
+    private void DestroyMySelf()
+    {
+        playerThatDropMe.bombNumber += 1;
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

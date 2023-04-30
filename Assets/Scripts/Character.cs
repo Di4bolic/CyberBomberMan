@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+    [SerializeField]
+    private Rigidbody2D rb;
+
+    public float speed = 30f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +19,10 @@ public class Character : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void Move(Vector2 direction)
+    {
+        rb.AddForce(direction * speed, ForceMode2D.Force);
     }
 }

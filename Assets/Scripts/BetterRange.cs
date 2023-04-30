@@ -19,5 +19,6 @@ public class BetterRange : Power
     public override void DoStuff(Player player)
     {
         player.range += 1;
+        player.rangeText.text = "Range : " + player.range;
     }
 }

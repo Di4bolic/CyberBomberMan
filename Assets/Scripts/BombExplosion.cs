@@ -32,13 +32,20 @@ public class BombExplosion : MonoBehaviour
         var player = collision.gameObject.GetComponent<Player>();
         if (chara != null)
         {
-            if (player.shield)
+            if (player == null)
             {
-                player.activateShield();
+                Destroy(chara.gameObject);
             }
             else
             {
-                Destroy(chara.gameObject);
+                if (player.shield)
+                {
+                    player.activateShield();
+                }
+                else
+                {
+                    Destroy(chara.gameObject);
+                }
             }
         }
     }

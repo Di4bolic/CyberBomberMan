@@ -122,6 +122,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 8368961971929054444}
   prefabBomb: {fileID: 8368961971929054440, guid: 142634b3dfefdbe4da588ae9fef7efa3, type: 3}
+  range: 2
+  shield: 0
+  rangeText: {fileID: 0}
+  shieldImage: {fileID: 0}
+  shieldText: {fileID: 0}
 --- !u!58 &8368961971929054445
 CircleCollider2D:
   m_ObjectHideFlags: 0
