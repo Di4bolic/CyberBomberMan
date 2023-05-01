@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class Player : Character
 {
@@ -27,40 +29,37 @@ public class Player : Character
     [SerializeField]
     private GameObject player2UI;
 
+    private Manager manager;
+
+    [SerializeField]
+    private string nameOfTheWinner;
+
+    // Lié aux Inputs
+    private Vector2 movementInput = Vector2.zero;
+    private bool canPlaceBomb = false;
+
     // Start is called before the first frame update
     void Start()
-    {
-        if (player2UI != null)
+    {        
+        chronoShield = chronoShieldMax;
+
+        manager = GameObject.Find("Manager").GetComponent<Manager>();
+
+        if (player2UI != null && !manager.isDuel)
         {
             player2UI.SetActive(false);
         }
-        chronoShield = chronoShieldMax;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Z))
-        {
-            Move(Vector2.up);
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            Move(Vector2.down);
-        }
-        if (Input.GetKey(KeyCode.Q))
-        {
-            Move(Vector2.left);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            Move(Vector2.right);
-        }
-
-        if (Input.GetKeyDown(KeyCode.E))
+        if (canPlaceBomb == true)
         {
             SpawnBomb();
         }
+
+        Move(movementInput);        
 
         if (isActivated)
         {            
@@ -77,8 +76,18 @@ public class Player : Character
         }
     }
 
+    public void OnMove(InputAction.CallbackContext context)
+    {
+        movementInput =  context.ReadValue<Vector2>();
+    }
+    public void OnPlaceBomb(InputAction.CallbackContext context)
+    {
+        canPlaceBomb = context.action.triggered;
+    }
+
     private void SpawnBomb()
     {
+        canPlaceBomb = false;
         if (bombNumber > 0)
         {
             bombNumber -= 1;
@@ -98,5 +107,18 @@ public class Player : Character
     {
         shieldImage.SetActive(true);
         shieldText.text = "Shield : Inactive";
+    }
+
+    public void IsKilledByAPlayer()
+    {
+        manager.nameOfTheWinner = nameOfTheWinner;
+        EndGame();
+    }
+
+    public void EndGame()
+    {
+        SceneManager.LoadScene("LoosingScene");
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 }

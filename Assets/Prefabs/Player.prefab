@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8368961971929054444}
   - component: {fileID: 8368961971929054443}
   - component: {fileID: 8368961971929054445}
+  - component: {fileID: -2299021258344279587}
   m_Layer: 2
   m_Name: Player
   m_TagString: Untagged
@@ -121,12 +122,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8368961971929054444}
+  speed: 30
   prefabBomb: {fileID: 8368961971929054440, guid: 142634b3dfefdbe4da588ae9fef7efa3, type: 3}
+  bombNumber: 5
   range: 2
   shield: 0
   rangeText: {fileID: 0}
   shieldImage: {fileID: 0}
   shieldText: {fileID: 0}
+  player2UI: {fileID: 0}
+  nameOfTheWinner: 
 --- !u!58 &8368961971929054445
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -143,3 +148,33 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &-2299021258344279587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368961971929054440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: 0}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: 
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}

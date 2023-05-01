@@ -44,7 +44,7 @@ public class BombExplosion : MonoBehaviour
                 }
                 else
                 {
-                    Destroy(chara.gameObject);
+                    player.IsKilledByAPlayer();
                 }
             }
         }

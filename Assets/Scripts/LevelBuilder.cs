@@ -40,10 +40,17 @@ public class LevelBuilder : MonoBehaviour
 
     private List<int> emptyCasesIndexesWithSomething = new List<int>();
 
+    [SerializeField]
+    private GameObject exitPrefab;
+
+    private Manager manager;
 
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
         ModeSelection();
         GridSpawn();
         PlacePlayers();
@@ -54,7 +61,7 @@ public class LevelBuilder : MonoBehaviour
 
     private void ModeSelection()
     {
-        var manager = GameObject.Find("Manager").GetComponent<Manager>();
+        manager = GameObject.Find("Manager").GetComponent<Manager>();
         if (manager.isDuel)
         {
             OnDuel();
@@ -109,6 +116,11 @@ public class LevelBuilder : MonoBehaviour
                 casesCount++;
             }
         }
+
+        if (!manager.isDuel)
+        {
+            PlaceExit();
+        }        
     }
 
     private void PlacePlayers()
@@ -232,5 +244,27 @@ public class LevelBuilder : MonoBehaviour
                 SearchNearEmptyCases(k - 13);
             }
         }
-    }    
+    }
+
+    private void PlaceExit()
+    {
+        var secretCaseIndex = Random.Range(0, listCases.Count);
+        if (listCases[secretCaseIndex] != null)
+        {
+            if (listCases[secretCaseIndex].canBreak)
+            {
+                var xpos = -6 + secretCaseIndex % 13;
+                var ypos = -6 + secretCaseIndex / 13;
+                Instantiate(exitPrefab, new Vector2(xpos, ypos), Quaternion.identity);
+            }
+            else
+            {
+                PlaceExit();
+            }
+        }
+        else
+        {
+            PlaceExit();
+        }
+    }
 }

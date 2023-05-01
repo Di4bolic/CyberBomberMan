@@ -80,7 +80,7 @@ public class Enemy : Character
             }
             else
             {
-                Destroy(player.gameObject);
+                player.EndGame();
             }
         }
     }

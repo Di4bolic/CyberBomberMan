@@ -1576,6 +1576,7 @@ MonoBehaviour:
   spawnableCasesIndex: 
   power1: {fileID: 1091669270502281693, guid: f3d0576574d928647b3d61709e9e1e83, type: 3}
   power2: {fileID: 1091669270502281693, guid: 75d2710aef636f24fb8e49473a0bd8a0, type: 3}
+  exitPrefab: {fileID: 6070275582245857754, guid: dfd132b05e6fa0a4fbb5e0812f38afd8, type: 3}
 --- !u!4 &457033091
 Transform:
   m_ObjectHideFlags: 0
@@ -2800,12 +2801,27 @@ PrefabInstance:
       propertyPath: shieldImage
       value: 
       objectReference: {fileID: 1862814209}
+    - target: {fileID: 8368961971929054443, guid: bb44feddb7ed26343b61ef09a50fcd77, type: 3}
+      propertyPath: nameOfTheWinner
+      value: Player2
+      objectReference: {fileID: 0}
     - target: {fileID: 8368961971929054444, guid: bb44feddb7ed26343b61ef09a50fcd77, type: 3}
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb44feddb7ed26343b61ef09a50fcd77, type: 3}
+--- !u!114 &1064079557 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8368961971929054443, guid: bb44feddb7ed26343b61ef09a50fcd77, type: 3}
+  m_PrefabInstance: {fileID: 1064079556}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087117153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c71fc837709a9104b8af0d79ab494acc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1065174712
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5564,6 +5580,68 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8368961971929054440, guid: bb44feddb7ed26343b61ef09a50fcd77, type: 3}
   m_PrefabInstance: {fileID: 1064079556}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2087117154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087117153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 83791bb670e7be846a31a86cc8b99ff1, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1064079557}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ff7dc2e4-3d8b-4794-930f-6c52ffdea427
+    m_ActionName: Gameplay/Movement[/DualShock4GamepadHID/leftStick]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1064079557}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: OnPlaceBomb
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 36c0e180-f7f2-4a60-8cd4-4a53f927f38e
+    m_ActionName: Gameplay/PlaceBomb[/DualShock4GamepadHID/buttonSouth]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Player2
+  m_DefaultActionMap: Gameplay
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1001 &2094685656
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5779,12 +5857,89 @@ PrefabInstance:
       propertyPath: shieldImage
       value: 
       objectReference: {fileID: 13500251}
+    - target: {fileID: 8368961971929054443, guid: bb44feddb7ed26343b61ef09a50fcd77, type: 3}
+      propertyPath: nameOfTheWinner
+      value: Player1
+      objectReference: {fileID: 0}
     - target: {fileID: 8368961971929054444, guid: bb44feddb7ed26343b61ef09a50fcd77, type: 3}
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb44feddb7ed26343b61ef09a50fcd77, type: 3}
+--- !u!114 &2102423285 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8368961971929054443, guid: bb44feddb7ed26343b61ef09a50fcd77, type: 3}
+  m_PrefabInstance: {fileID: 2102423284}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37689303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c71fc837709a9104b8af0d79ab494acc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2102423286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37689303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 83791bb670e7be846a31a86cc8b99ff1, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2102423285}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ff7dc2e4-3d8b-4794-930f-6c52ffdea427
+    m_ActionName: Gameplay/Movement[/DualShock4GamepadHID/leftStick]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2102423285}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: OnPlaceBomb
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 36c0e180-f7f2-4a60-8cd4-4a53f927f38e
+    m_ActionName: Gameplay/PlaceBomb[/DualShock4GamepadHID/buttonSouth]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Player1
+  m_DefaultActionMap: Gameplay
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1001 &2116540725
 PrefabInstance:
   m_ObjectHideFlags: 0
