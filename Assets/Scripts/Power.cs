@@ -18,6 +18,7 @@ public class Power : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Si le power est trigger par un joueur
         var player = collision.gameObject.GetComponent<Player>();
         if (player != null)
         {

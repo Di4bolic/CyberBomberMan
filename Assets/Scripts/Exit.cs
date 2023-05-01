@@ -19,6 +19,7 @@ public class Exit : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Si le joueur trouve la sortie cachée
         var player = collision.gameObject.GetComponent<Player>();
         if (player != null)
         {

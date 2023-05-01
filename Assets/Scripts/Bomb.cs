@@ -58,6 +58,7 @@ public class Bomb : MonoBehaviour
             Case tempCase;
             RaycastHit2D rayCastHit;
 
+            // Vérifie la situation autour de la bombe
             for (int i = 0; i < directions.Count; i++)
             {
                 if (rayCastHit = Physics2D.Raycast(transform.position, directions[i], range, acceptedLayers))
@@ -66,6 +67,7 @@ public class Bomb : MonoBehaviour
                     var distance = Mathf.Ceil(rayCastHit.distance);
                     if (tempCase != null && tempCase.canBreak)
                     {
+                        // Détriut la case dans une direction qui est dans la range de la bombe
                         Destroy(tempCase.gameObject);                        
                         InstantiateExplosions(distance, i);
                     }
@@ -95,6 +97,7 @@ public class Bomb : MonoBehaviour
 
     private void InstantiateExplosions(float distance, int i)
     {
+        // Permet d'instancier les lignes d'ecxplosions après avoir vérifier la distance de celles-çi
         for (int j = 1; j <= distance; j++)
         {
             if (j == distance)
@@ -126,6 +129,7 @@ public class Bomb : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Détruit l'enemi ou met fin à la partie si un des deux acteurs rentre dans le trigger
         var chara = collision.gameObject.GetComponent<Character>();
         var player = collision.gameObject.GetComponent<Player>();
         if (chara != null)

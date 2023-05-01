@@ -16,6 +16,7 @@ public class BombExplosion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Détruit l'explosion quand elle est terminée
         if (chrono > 0)
         {
             chrono -= Time.deltaTime;
@@ -28,6 +29,7 @@ public class BombExplosion : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Détruit l'enemi ou met fin à la partie si un des deux acteurs rentre dans le trigger
         var chara = collision.gameObject.GetComponent<Character>();
         var player = collision.gameObject.GetComponent<Player>();
         if (chara != null)

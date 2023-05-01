@@ -45,6 +45,7 @@ public class Player : Character
 
         manager = GameObject.Find("Manager").GetComponent<Manager>();
 
+        // Cache l'UI du joueur 2 si mode solo
         if (player2UI != null && !manager.isDuel)
         {
             player2UI.SetActive(false);
@@ -61,6 +62,7 @@ public class Player : Character
 
         Move(movementInput);        
 
+        // Durée de vie du bouclier
         if (isActivated)
         {            
             if (chronoShield > 0)
@@ -76,6 +78,7 @@ public class Player : Character
         }
     }
 
+    // Inputs manettes
     public void OnMove(InputAction.CallbackContext context)
     {
         movementInput =  context.ReadValue<Vector2>();
@@ -87,6 +90,7 @@ public class Player : Character
 
     private void SpawnBomb()
     {
+        // Permet d'instancier une bombe au milieu d'une case vide
         canPlaceBomb = false;
         if (bombNumber > 0)
         {
@@ -111,12 +115,14 @@ public class Player : Character
 
     public void IsKilledByAPlayer()
     {
+        // Transmet l'information du joueur mort et met fin à la partie
         manager.nameOfTheWinner = nameOfTheWinner;
         EndGame();
     }
 
     public void EndGame()
     {
+        // Met fin à la partie
         SceneManager.LoadScene("LoosingScene");
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;

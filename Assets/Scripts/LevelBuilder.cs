@@ -48,9 +48,11 @@ public class LevelBuilder : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Gestion de la souris
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
 
+        // Appelle des fonctions de construction du level
         ModeSelection();
         GridSpawn();
         PlacePlayers();
@@ -61,6 +63,7 @@ public class LevelBuilder : MonoBehaviour
 
     private void ModeSelection()
     {
+        // Modifie les paramètre de construction en fonction du mode de jeu
         manager = GameObject.Find("Manager").GetComponent<Manager>();
         if (manager.isDuel)
         {
@@ -90,6 +93,7 @@ public class LevelBuilder : MonoBehaviour
 
     private void GridSpawn()
     {
+        // Construction de la grille
         for (int i = -6; i < 7; i++)
         {
             // Création de la grille
@@ -107,7 +111,7 @@ public class LevelBuilder : MonoBehaviour
                     caseSelector = Random.Range(0, difficulty + 1);
                     if (caseSelector == 1)
                     {
-                        // Instancier la case incassable
+                        // Instancier la case cassable
                         var actualCase = Instantiate(prefabCanBreakCase, new Vector2(j, i), Quaternion.identity).GetComponent<Case>();
                         listCases[casesCount] = actualCase;
                     }
@@ -119,12 +123,14 @@ public class LevelBuilder : MonoBehaviour
 
         if (!manager.isDuel)
         {
+            // Permet de placer la sortie si mode solo
             PlaceExit();
         }        
     }
 
     private void PlacePlayers()
     {
+        // Permet de placer les/le joueur(s)
         if (numberOfPlayers > players.Count)
         {
             numberOfPlayers = players.Count;
@@ -140,6 +146,7 @@ public class LevelBuilder : MonoBehaviour
             Destroy(players[m]);
             players.RemoveAt(m);
         }
+        // On place chaque joueur dans une zone contenant minimum un certains nombre de cases vides et on le place sur une case qui ne contient rien d'autre
         for (int n = 0; n < players.Count; n++)
         {
             var selectedCaseIndex = spawnableCasesIndex[Random.Range(0, spawnableCasesIndex.Count)];
@@ -156,6 +163,7 @@ public class LevelBuilder : MonoBehaviour
 
     private void PlaceEnemies()
     {
+        // Similaire à la manière de placer un joueur
         spawnableCasesIndex.Clear();
         FindEmptyCases(minEmptyCasesToSpawnEnemy);
         for (int n = 0; n < numberOfEnemies; n++)
@@ -175,6 +183,7 @@ public class LevelBuilder : MonoBehaviour
 
     private void PlacePower(GameObject power, int number)
     {
+        // Similaire à la manière de placer un joueur
         for (int o = 0; o < number; o++)
         {
             var selectedCaseIndex = Random.Range(0, listCases.Count);
@@ -191,6 +200,7 @@ public class LevelBuilder : MonoBehaviour
 
     private void FindEmptyCases(int minEmptyCasesToSpawn)
     {
+        // Permet de lancer la fonction qui va remplir une liste d'index de zones vides contenant au minimum "minEmptyCasesToSpawn"
         for (int k = 0; k < listCases.Count; k++)
         {
             if (listCases[k] == null && !spawnableCasesIndex.Contains(k))
@@ -210,6 +220,7 @@ public class LevelBuilder : MonoBehaviour
 
     private void SearchNearEmptyCases(int k)
     {
+        // Fonction récursive permettant de trouver les cases voisines vides permettant de constituer une zone vide
         spawnableCasesIndex.Add(k);
         emptyCasesNear++;
 
@@ -248,6 +259,7 @@ public class LevelBuilder : MonoBehaviour
 
     private void PlaceExit()
     {
+        // Place la sortie en dessous d'une case contenant un bloc cassable
         var secretCaseIndex = Random.Range(0, listCases.Count);
         if (listCases[secretCaseIndex] != null)
         {

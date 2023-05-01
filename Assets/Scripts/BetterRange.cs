@@ -18,6 +18,7 @@ public class BetterRange : Power
 
     public override void DoStuff(Player player)
     {
+        // Améliore la porté des bombes du joueur
         player.range += 1;
         player.rangeText.text = "Range : " + player.range;
     }

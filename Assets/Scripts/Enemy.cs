@@ -36,6 +36,7 @@ public class Enemy : Character
     // Update is called once per frame
     void Update()
     {
+        // Permet d'effectuer le mouvement tout les chronoMax secondes
         if (chrono > 0)
         {
             chrono -= Time.deltaTime;
@@ -49,6 +50,7 @@ public class Enemy : Character
 
     private void CheckThenMove()
     {
+        // "Regarde" dans les quatres directions et valide lesquelles sont libres
         for (int i = 0; i < 4; i++)
         {
             if (!Physics2D.Raycast(transform.position, directions[i], 1, acceptedLayers))
@@ -60,24 +62,28 @@ public class Enemy : Character
                 directionsWhereCanMove[i] = false;
             }
         }
-
+        // Prend une direction au hasard
         var chosenDirectionIndex = Random.Range(0, 4);
         while (!directionsWhereCanMove[chosenDirectionIndex])
         {
             chosenDirectionIndex = Random.Range(0, 4);
         }
+        // Effectue le mouvement
         Move(directions[chosenDirectionIndex]);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Si le joueur entre en collision
         var player = collision.gameObject.GetComponent<Player>();
         if (player != null)
         {
+            // Vérifie si le joueur possède un shiled
             if (player.shield)
             {
                 player.activateShield();
             }
+            // Met fin à la partie
             else
             {
                 player.EndGame();

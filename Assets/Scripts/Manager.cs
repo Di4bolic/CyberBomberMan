@@ -13,6 +13,7 @@ public class Manager : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(gameObject);
+        // Permet de changer le texte de fin selon qui gagne la partie
         var gOLT = GameObject.Find("Loosetext");
         if (gOLT != null)
         {
@@ -29,12 +30,14 @@ public class Manager : MonoBehaviour
 
     public void StartTheGameInDuel(bool isIt)
     {
+        // Lance une partie en mode duel
         isDuel = isIt;
         SceneManager.LoadScene("GameScene");
     }
 
     public void GoToMenu()
     {
+        // Retourne au menu après avoir supprimé les anciens "Manager"
         if (oldManager != null)
         {
             Destroy(oldManager.gameObject);
@@ -46,12 +49,14 @@ public class Manager : MonoBehaviour
 
     public void Retry()
     {
+        // Relance une partie dans le mode précédant après avoir supprimé le "Manager" qui ne contient pas les bonnes informations
         Destroy(gameObject);
         SceneManager.LoadScene("GameScene");
     }
 
     public void QuitGame()
     {
+        // Ferme le jeu
         Application.Quit();
     }
 }

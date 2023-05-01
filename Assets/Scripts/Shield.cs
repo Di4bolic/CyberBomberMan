@@ -18,6 +18,7 @@ public class Shield : Power
 
     public override void DoStuff(Player player)
     {
+        // Met un bouclier au joueur
         player.shield = true;
         player.ShowShieldUI();
     }
